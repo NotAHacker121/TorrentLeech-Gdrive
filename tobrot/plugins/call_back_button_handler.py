@@ -10,7 +10,7 @@ logging.basicConfig(level=logging.DEBUG,
                     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 LOGGER = logging.getLogger(__name__)
 
-from pyrogram import CallbackQuery
+from pyrogram.types import CallbackQuery
 from tobrot.helper_funcs.admin_check import AdminCheck
 from tobrot.helper_funcs.download_aria_p_n import aria_start
 from tobrot.helper_funcs.youtube_dl_button import youtube_dl_call_back
@@ -51,7 +51,7 @@ async def button(bot, update: CallbackQuery):
                     await i_m_s_e_g.edit_text("<i>FAILED</i>\n\n" + str(e) + "\n#error")
         elif cb_data == "fuckingdo":
             if update.from_user.id in AUTH_CHANNEL:
-                g_d_list = ['app.json', 'venv', 'rclone.conf', '.gitignore', '_config.yml', 'COPYING', 'Dockerfile', 'DOWNLOADS', 'Procfile', '.heroku', '.profile.d', 'rclone.jpg', 'README.md', 'requirements.txt', 'runtime.txt', 'start.sh', 'tobrot', 'vendor']
+                g_d_list = ['app.json', 'venv', 'rclone.conf', '.gitignore', '_config.yml', 'COPYING', 'Dockerfile', 'DOWNLOADS', 'Procfile', '.heroku', '.profile.d', 'rclone.jpg', 'README.md', 'requirements.txt', 'runtime.txt', 'start.sh', 'tobrot', 'gautam', 'Torrentleech-Gdrive.log', 'vendor']
                 LOGGER.info(g_d_list)
                 g_list = os.listdir()
                 LOGGER.info(g_list)

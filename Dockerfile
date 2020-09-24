@@ -12,10 +12,8 @@ ENV TZ=Asia/Kolkata
 
 
 RUN apt -qq install -y git aria2 wget curl busybox unzip unrar tar python3 ffmpeg python3-pip
-RUN wget -qO- https://api.github.com/repos/mawaya/rclone/releases/latest \
-  | grep browser_download_url | grep linux-amd64 | cut -d '"' -f 4 \
-  | wget --no-verbose -i-
-RUN unzip -j fclone*.zip -d /usr/bin && chmod 0755 /usr/bin/fclone
+RUN wget https://rclone.org/install.sh
+RUN bash install.sh
 
 RUN mkdir /app/gautam
 RUN wget -O /app/gautam/gclone.gz https://git.io/JJMSG
